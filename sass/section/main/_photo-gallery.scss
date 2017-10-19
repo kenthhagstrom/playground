@@ -1,0 +1,33 @@
+.photo-gallery {
+	background-color: transparent;
+	padding: 0;
+	overflow: hidden;
+	width: 100%;
+}
+.photo-gallery > div.photo {
+	float: left;
+	padding: 0 0 0 0;
+	width: 33.333%;
+}
+@supports (display: grid) {
+	.photo-gallery > div.photo {
+		width: auto;
+	}
+}
+.photo-gallery {
+	display: grid;
+	grid-gap: $padding;
+	grid-template-columns: 1fr;
+	@media (min-width: $breakpoint-small) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (min-width: $breakpoint-medium) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	margin-bottom: 2rem;
+	width: 100%;
+}
+div.photo img {
+	height: auto !important;
+	max-width: 100%;
+}

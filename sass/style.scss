@@ -1,0 +1,30 @@
+// Import Google Font - Raleway 300 & 700
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
+
+@import 'reset';
+@import 'vars';
+@import 'typography';
+@import 'section/header/content';
+@import 'section/main/content';
+@import 'section/footer/content';
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: $background-color;
+	color: $text-color;
+	display: grid;
+	grid-template-columns: [page-start] 1fr [content-start] 10fr [content-end] 1fr [content-end];
+	grid-template-rows: [nav-start] minmax(5rem,auto) [header-start] minmax(30rem,auto) [main-start] 15rem [header-end] auto [main-end] auto [footer-start] minmax(200px,auto) [footer-end];
+	font-family: $sans-serif;
+	overflow-x: hidden;
+}
+a, a:active {
+	color: #4Ea9dC;
+	transition: all 0.5s ease;
+}
+a:hover,a:focus {
+	color: #2E89aC;
+}

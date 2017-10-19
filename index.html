@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lekstuga</title>
+<link rel="stylesheet" id="style-css" href="style.css" type="text/css" media="all">
+<body>
+
+<header class="section-header">
+	<nav class="menu-bar">
+		<ul class="menu-desktop">
+			<li><h1 class="site-title"><a href="#">Tellus Mollis Risus</a></h1></li>
+			<li><a href="#">item1</a></li>
+			<li><a href="#">item2</a></li>
+			<li><a href="#">item3</a></li>
+			<li><a href="#">item4</a></li>
+		</ul><!-- end .menu-desktop -->
+		<ul class="menu-mobile">
+			<li class="menu-toggle"><a href="#">&#9776; MENU</a></li>
+			<li class="mobile-menu-item"><a href="#">mobile-item1</a></li>
+			<li class="mobile-menu-item"><a href="#">mobile-item2</a></li>
+			<li class="mobile-menu-item"><a href="#">mobile-item3</a></li>
+		</ul><!-- end .menu-mobile -->
+	</nav><!-- end .menu-bar -->
+</header><!-- end .header -->
+
+<section class="title">
+	<h1>Cras justo odio, dapibus ac facilisis in. Etiam porta sem malesuada magna mollis euismod.</h1>
+</section><!-- end .title -->
+
+<section class="content">
+	<article itemscope itemType="http://schema.org/Article">
+
+		<header class="article-header">
+			<p class="article-author">Published by: <span class="post-meta-author"><a href="#">John Doe</a></span></p>
+			<time class="post-meta-date" pubdate>2017-10-27</time>
+		</header>
+
+		<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+		<h2>Lorem ipsum dolor sit amet</h2>
+		<p>Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+
+		<div class="photo-gallery">
+			<div class="photo">
+				<img src="https://picsum.photos/800/600/?image=254">
+				<p>254</p>
+			</div><!-- end .photo -->
+			<div class="photo">
+				<img src="https://picsum.photos/800/600/?image=173">
+				<p>173</p>
+			</div><!-- end .photo -->
+			<div class="photo">
+				<img src="https://picsum.photos/800/600/?image=95">
+				<p>095</p>
+			</div><!-- end .photo -->
+			<div class="photo">
+				<img src="https://picsum.photos/800/600/?image=345">
+				<p>345</p>
+			</div><!-- end .photo -->
+			<div class="photo">
+				<img src="https://picsum.photos/800/600/?image=368">
+				<p>368</p>
+			</div><!-- end .photo -->
+			<div class="photo">
+				<img src="https://picsum.photos/800/600/?image=987">
+				<p>987</p>
+			</div><!-- end .photo -->
+		</div><!-- end .poto-gallery -->
+
+		<h5>Aenean lacinia bibendum nulla sed consectetur</h5>
+		<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper.</p>
+
+		<footer class="article-footer">
+			<p class="article-categories">
+				Posted in: <a href="#">Category</a>.
+			</p>
+			<p class="article-tags">
+				Tagged: <a href="#">A Tag</a>, <a href="#">Another Tag</a>, <a href="#">A Very Long Tag Name</a>
+			</p>
+		</footer>
+	</article>
+</section><!-- end .content -->
+
+<footer class="footer">
+footer
+</footer><!-- end .footer -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function() {
+	$('.mobile-menu-item').hide();
+    $('.menu-toggle').click(function() {
+		var clicks = $(this).data('clicks');
+		if(clicks) {
+			$('.mobile-menu-item').css("display", "none");
+		} else {
+			$('.mobile-menu-item').css("display", "block");
+		}
+		$(this).data("clicks", !clicks);
+    });
+});
+</script>
+
+</body>
+</html>

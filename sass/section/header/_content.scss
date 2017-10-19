@@ -1,0 +1,13 @@
+.section-header {
+	background-color: $dark;
+	display: flex;
+	grid-template-columns: 1fr 5fr 5fr 1fr;
+	grid-template-rows: 80px;
+	grid-column: page;
+	grid-row: nav-start / header-start;
+	min-height: 50px;
+	justify-content: space-around;
+	align-items: center;
+}
+
+@import 'menu-bar';

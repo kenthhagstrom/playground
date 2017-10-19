@@ -1,0 +1,132 @@
+.title {
+	background-image: url('https://picsum.photos/1000/400/?image=876');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	grid-column: page;
+	grid-row: header-start / header-end;
+	align-items: center;
+	justify-content: center;
+
+	@media (min-width: $breakpoint-medium) {
+		background-attachment: fixed;
+	}
+
+	h1 {
+		color: white;
+		font-size: 3rem;
+		text-shadow: 0px 2px 5px rgba(0, 0, 0, 1);
+		margin: 0;
+		max-width: 80%;
+		padding-top: 0;
+		padding-bottom: 15rem;
+		text-align: center;
+	}
+	@media (min-width: 40em) {
+		h1 {
+			font-size: 4rem;
+			margin-top: 5rem;
+			padding-bottom: 20rem;
+		}
+	}
+	@media (min-width: 64em){
+		h1 {
+			font-size: 6rem;
+		}
+	}
+}
+.content {
+	background-color: #f2f2f2;
+	box-shadow: 0px 5px 10px -3px rgba(0,0,0,0.75);
+	grid-column: page;
+	grid-row: main-start / main-end;
+	padding-top: 0;
+
+	@media (min-width: $breakpoint-small) {
+		border-top-left-radius: 0.5em;
+		border-top-right-radius: 0.5em;
+		grid-column: content;
+	}
+
+	article {
+		padding: $padding;
+
+		time {
+			font-size: 1.6rem;
+			color: #8c8c8c;
+			line-height: 3rem;
+		}
+		p {
+			font-size: 2.2rem;
+			margin: 0 0 $padding 0;
+			line-height: 3.5rem;
+		}
+		p:last-child {
+			margin: 0;
+		}
+		@media (min-width: $breakpoint-medium){
+			h1 {
+				font-size: 6rem;
+			}
+			h2 {
+				font-size: 4.2rem;
+			}
+		}
+		.article-header {
+			border-bottom: 1px dashed #ccc;
+			color: #8c8c8c;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin-bottom: 1.5rem;
+			padding-bottom: 1.5rem;
+			margin-top: -$padding;
+			padding-top: 1.5rem;
+			margin-left: -$padding;
+			padding-left: $padding;
+			margin-right: -$padding;
+			padding-right: $padding;
+
+			p.article-author {
+				font-size: 1.6rem;
+				line-height: 3rem;
+				margin: 0;
+			}
+			a {
+				font-weight:bold;
+				text-decoration: none;
+			}
+		}
+		.article-footer {
+			border-top: 1px dashed #ccc;
+			display: flex;
+			color: #8c8c8c;
+			margin-left: -$padding;
+			margin-right: -$padding;
+			padding-left: $padding;
+			padding-right: $padding;
+			margin-top: 1.5rem;
+			padding-top: 1.5rem;
+			margin-bottom: -$padding;
+			justify-content: space-between;
+			font-size: 1.6rem;
+
+			p.article-tags, p.article-categories {
+				font-size: 1.6rem;
+				padding: 0;
+				line-height: 3rem;
+				margin-bottom: 1.5rem;
+			}
+			.article-tags a, .article-categories a {
+				font-weight:bold;
+				text-decoration: none;
+			}
+			.article-tags a:hover, .article-categories a:hover {
+
+			}
+		}
+	}
+}
+
+@import 'photo-gallery';
