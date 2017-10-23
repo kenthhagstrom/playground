@@ -13,10 +13,10 @@ html {
 }
 
 body {
-	background-color: $background-color;
+	background-color: $body-background-color;
 	color: $text-color;
 	display: grid;
-	grid-template-columns: [page-start] 1fr [content-start] 10fr [content-end] 1fr [content-end];
+	grid-template-columns: [page-start] 1fr [content-start] 10fr [content-end] 1fr [page-end];
 	grid-template-rows: [nav-start] minmax(5rem,auto) [header-start] minmax(30rem,auto) [main-start] 15rem [header-end] auto [main-end] auto [footer-start] minmax(200px,auto) [footer-end];
 	font-family: $sans-serif;
 	overflow-x: hidden;

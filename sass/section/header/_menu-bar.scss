@@ -1,3 +1,10 @@
+.menu-container {
+	background-color: $menu-background-color;
+	width: 100%;
+	@media (min-width: $breakpoint-medium) {
+		width: 80%;
+	}
+}
 .menu-bar {
 	width: 100%;
 	ul {
@@ -12,26 +19,26 @@
 
 	ul.menu-desktop {
 		list-style: none;
-		height: 60px;
+		height: $menu-bar-height;
 
 		li {
 			align-self: stretch;
-			line-height: 60px;
+			line-height: $menu-bar-height;
 
 			a {
-				color: white;
+				color: $menu-text-color;
 				display: block;
 				padding: 0 2rem;
-				font-size: 1.4rem;
+				font-size: $menu-bar-font-size;
 				text-decoration: none;
 				height: 100%;
 				vertical-align: middle;
-				line-height: 60px;
-				height: 60px;
+				line-height: $menu-bar-height;
+				height: $menu-bar-height;
 			}
 			a:hover {
-				background-color: #333;
-				color: #ccc;
+				background-color: $menu-background-color-hover;
+				color: $menu-text-color-hover;
 			}
 		}
 		li:first-child {
@@ -52,6 +59,7 @@
 	}
 
 	ul.menu-mobile {
+		background: $menu-background-color;
 		display: flex;
 		flex-direction: column;
 		@media (min-width: $breakpoint-medium) {
@@ -61,26 +69,26 @@
 			display: block;
 		}
 		li {
-			line-height: 50px;
+			line-height: $menu-bar-height;
 			display: block;
 			display: flex;
-			border-bottom: 1px solid #333;
 			flex-direction: column;
-			height: 60px;
+			height: $menu-bar-height;
 			a {
-				background-color: #222;
-				color: white;
+				background-color: $menu-background-color;
+				border-bottom: 1px solid $menu-background-color-hover;
+				color: $menu-text-color;
 				display: block;
 				padding: 0 2rem;
-				font-size: 1.4rem;
+				font-size: $menu-bar-font-size;
 				text-align: center;
 				text-decoration: none;
-				height: 60px;
-				line-height: 59px;
+				height: $menu-bar-height;
+				line-height: $menu-bar-height;
 			}
 			a:hover {
-				background-color: #333 !important;
-				color: #ccc;
+				background-color: $menu-background-color-hover;
+				color: $menu-text-color-hover;
 			}
 		}
 	}

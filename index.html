@@ -8,21 +8,23 @@
 <body>
 
 <header class="section-header">
-	<nav class="menu-bar">
-		<ul class="menu-desktop">
-			<li><h1 class="site-title"><a href="#">Tellus Mollis Risus</a></h1></li>
-			<li><a href="#">item1</a></li>
-			<li><a href="#">item2</a></li>
-			<li><a href="#">item3</a></li>
-			<li><a href="#">item4</a></li>
-		</ul><!-- end .menu-desktop -->
-		<ul class="menu-mobile">
-			<li class="menu-toggle"><a href="#">&#9776; MENU</a></li>
-			<li class="mobile-menu-item"><a href="#">mobile-item1</a></li>
-			<li class="mobile-menu-item"><a href="#">mobile-item2</a></li>
-			<li class="mobile-menu-item"><a href="#">mobile-item3</a></li>
-		</ul><!-- end .menu-mobile -->
-	</nav><!-- end .menu-bar -->
+	<div class="menu-container">
+		<nav class="menu-bar">
+			<ul class="menu-desktop">
+				<li><h1 class="site-title"><a href="#">Tellus Mollis Risus</a></h1></li>
+				<li><a href="#">item1</a></li>
+				<li><a href="#">item2</a></li>
+				<li><a href="#">item3</a></li>
+				<li><a href="#">item4</a></li>
+			</ul><!-- end .menu-desktop -->
+			<ul class="menu-mobile">
+				<li class="menu-toggle"><a href="#">&#9776; MENU</a></li>
+				<li class="mobile-menu-item"><a href="#">mobile-item1</a></li>
+				<li class="mobile-menu-item"><a href="#">mobile-item2</a></li>
+				<li class="mobile-menu-item"><a href="#">mobile-item3</a></li>
+			</ul><!-- end .menu-mobile -->
+		</nav><!-- end .menu-bar -->
+	</div><!-- end .menu-container -->
 </header><!-- end .header -->
 
 <section class="title">
@@ -33,13 +35,14 @@
 	<article itemscope itemType="http://schema.org/Article">
 
 		<header class="article-header">
-			<p class="article-author">Published by: <span class="post-meta-author"><a href="#">John Doe</a></span></p>
+			<p class="article-author">Author: <span class="post-meta-author"><a href="#">John Doe</a></span></p>
 			<time class="post-meta-date" pubdate>2017-10-27</time>
-		</header>
+		</header><!-- end .article-header -->
 
 		<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-		<h2>Lorem ipsum dolor sit amet</h2>
+		<h2>h2 header Lorem ipsum dolor sit amet</h2>
 		<p>Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+		<h1>h1 header - the photo gallery</h1>
 
 		<div class="photo-gallery">
 			<div class="photo">
@@ -68,24 +71,34 @@
 			</div><!-- end .photo -->
 		</div><!-- end .poto-gallery -->
 
-		<h5>Aenean lacinia bibendum nulla sed consectetur</h5>
+		<h3>h3 header Aenean lacinia bibendum nulla sed consectetur</h3>
 		<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper.</p>
+
+		<h4>h4 header</h4>
+
+		<h5>h5 header</h5>
+
+		<h6>h6 header</h6>
 
 		<footer class="article-footer">
 			<p class="article-categories">
-				Posted in: <a href="#">Category</a>.
+				Category: <a href="#">Creative</a>.
 			</p>
 			<p class="article-tags">
-				Tagged: <a href="#">A Tag</a>, <a href="#">Another Tag</a>, <a href="#">A Very Long Tag Name</a>
+				Tags: <a href="#">A Tag</a>, <a href="#">Another Tag</a>, <a href="#">A Very Long Tag Name</a>
 			</p>
-		</footer>
-	</article>
+		</footer><!-- end .article-footer -->
+		<div class="comments">
+			<p>This is the comments area.</p>
+		</div>
+	</article><!-- end .section-content article -->
 </section><!-- end .content -->
 
 <footer class="footer">
-footer
+
 </footer><!-- end .footer -->
 
+<!-- JS scripts loading in footer -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 $(document).ready(function() {
@@ -93,9 +106,9 @@ $(document).ready(function() {
     $('.menu-toggle').click(function() {
 		var clicks = $(this).data('clicks');
 		if(clicks) {
-			$('.mobile-menu-item').css("display", "none");
+			$('.mobile-menu-item').hide();
 		} else {
-			$('.mobile-menu-item').css("display", "block");
+			$('.mobile-menu-item').show();
 		}
 		$(this).data("clicks", !clicks);
     });

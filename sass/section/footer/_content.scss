@@ -1,5 +1,7 @@
 .footer {
 	background: #444;
+	display: inline-block; // fallback
+	display: grid;
 	grid-column: page;
 	grid-row: footer-start / footer-end;
 }
